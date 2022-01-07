@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?xux3v2');
+  src:  url('fonts/icomoon.eot?xux3v2#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?xux3v2') format('truetype'),
+    url('fonts/icomoon.woff?xux3v2') format('woff'),
+    url('fonts/icomoon.svg?xux3v2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-dots:before {
+  content: "\e900";
+}
+.icon-arrow:before {
+  content: "\e901";
+}
+.icon-search:before {
+  content: "\e902";
+}
+.icon-message:before {
+  content: "\e903";
+}
+.icon-compass:before {
+  content: "\e904";
+}
+.icon-hearts:before {
+  content: "\e905";
+}
+.icon-profile:before {
+  content: "\e906";
+}
+.icon-grid:before {
+  content: "\e907";
+}
+.icon-home:before {
+  content: "\e908";
+}
+.icon-bubble:before {
+  content: "\e96b";
+}
+.icon-spinner:before {
+  content: "\e982";
+}
+.icon-enlarge:before {
+  content: "\e98b";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}

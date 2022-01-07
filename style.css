@@ -1,0 +1,249 @@
+/** atslegt noklusejumu, linijai kas ir headerii**/
+/** selektorus augstak pozoicionejam kas aiznem un ieklauj vairak, piemeram body utt**/
+body {
+    background: #FAFAFA;
+    margin: 0;
+    min-height: 1000px;
+}
+
+/** pieslegt (selektet) un stilizet headeri**/
+header {
+    background: #FFFFFF;
+    border-bottom: 1px solid #dbdbdb;
+    position: sticky;
+    top: 0;
+    width: 100vw;
+}
+
+.header_container {
+    display: flex; /** lai ikonas kas ir header konteinerii noliktu blakus vienu otrai**/
+    align-items: center; /** lai noliktu pa vidu**/
+    justify-content: space-between;
+    height: 53px;
+    margin: auto; /** nocentresies automatiski**/
+    max-width: 935px;
+    padding: 0 8px; /** teksti un ikonas kas ir header containeri, attalums no malaa**/
+}
+
+.top_logo {
+    display: flex;
+}
+
+/**html faila iedevam Nav class - top menu lai css faila varetu selektet un stilizet**/
+.header_container a {
+    text-decoration: none;
+}
+
+
+
+.top_menu {
+    display: flex;
+    align-items: center;
+}
+
+/** burtu piemeram .top_menu a { ......} burtu a liek, 
+tad ja selektē ar kautko kur ir linki, 
+piemeram ikonas saja gadijuma**/
+
+.top_menu a,
+.top_menu label {
+    color: #262626;
+    display: flex;
+    font-size: 22px;
+    align-items: center;
+    margin-left: 8px;
+    padding: 7px;
+}
+
+
+.top_menu .dropdown_link {
+    display: none;
+    height: 22px;
+    width: 22px;
+}
+
+#dropdown_checkbox {
+    display: none;
+}
+
+
+.top_dropdown {
+    display: flex;
+}
+
+.top_dropdown .text {
+    display: none;
+}
+
+/**ielikt precizi ikonu lupu ieks lapas**/
+
+.search_bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/** iedevam klasi html faila, talak css faila sis ir lai stilizetu search lauku**/
+.search_bar > input {
+width: 215px;
+height: 29px;
+left: 604px;
+background: #FAFAFA;
+border: 1px solid #DBDBDB;
+box-sizing: border-box;
+border-radius: 3px;
+padding: 0 7px 0 20px;
+
+}
+
+
+.search_bar > input::placeholder {
+    text-align: center;
+}
+
+.search_bar > .icon-search {
+    color: #8f8f8f;
+    font-size: 9px;
+    position: absolute;
+    left: 72px;  
+}
+
+.search_bar > input:focus {
+    outline: none;
+}
+/**ikona lupa, aiziet pa kreisi, kad ieklikskina search laukumaa**/
+.search_bar > input:not([value]) + .icon-search,
+.search_bar > input:focus + .icon-search {
+    left: 8px;
+}
+
+
+.search_bar > input:focus::placeholder {
+    align-items: left;
+}
+
+/** seit sakaas MAIN sadala, augstak bija headers utt**/
+main {
+    max-width: 935px;
+    padding: 0 8px;
+    margin: auto;
+}
+
+main > div {
+    padding-top: 36px;
+}
+
+.gallery {
+    border-top: 1px solid #dbdbdb;
+}
+
+.gallery_nav {
+    display: flex;
+    justify-content: center;
+}
+/**seit regules ikonas un post un tagged**/
+.gallery_nav > a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #8f8f8f;
+    padding: 18px 10px 19px 2px;
+    margin: 0 29,5px;
+}
+/**sii ir atstarpe starp ikonu un vaardu post un tagged (vertical_align ir domata tekstam)**/
+.gallery_nav > a:before {
+    margin-right: 6.5px;
+    vertical-align: middle;
+}
+
+/** saadi var ar :hover uztaisit, ka tiek pielietots tiesi sis stils , piemeram border-top, taja gadijuma, kad uzbiida peli uz sii linka(pogas)un paradas arii sviitrina augsa**/
+.gallery_nav > a:hover {
+    border-top: 1px solid #262626;
+    color: #262626;
+    margin-top: -1px;
+}
+
+/**kolonnas kur bildes likt**/
+.gallery_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+}
+
+.gallery_grid > div {
+    height: 295px;
+    background: grey;
+}
+/** WievPorts )Kaa izkartojas majaslapa, kad skatas caur telefonu piemeram, tas @media ir KAS ir jaadara, un .gallery-grid KAM jaadara, kad samazinas ekraanu un uz telefoniem. Sis stils tiks piemerots ja ir ne vairak par 600 (piemeram lai var normali skatities uz telefona px**/
+@media only screen and (max-width: 850px) {
+    .gallery_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/*sis ir laikam prieks taa, lai atbilstu ari mobilajam versijam+taa meta html failaa*/
+@media only screen and (max-width: 570px) {
+        .gallery_grid {
+            grid-template-columns: 1fr;
+        
+    }
+
+    .top_menu .dropdown_link {
+        display: flex;
+    }
+/* seit linkiem (like,home,utt uztaisiju lielaku atstarpi sava starpa un lielaku neredzamos pogu, vieglak bus uzspiest uz linka*/
+    .top_menu a {
+        padding: 20px 7px ;
+        border-bottom: 1px solid #dbdbdb;
+    }
+/*Pedejam elementam nonem apakssvitru varetu likt ari ar last of type, 
+Last of type bus piemerojams pedejam jeb vienigajam tagam */
+    .top_menu a:last-child {
+        border: 0;
+    }
+
+
+
+/* seit tiek pielikts, tas ka links(poga) iezimejas, tad kad uzbiida virsu peli*/
+    .top_menu a:hover {
+        background: rgb(95, 95, 95, 0.801);
+    }
+
+    .top_menu a > i {
+        margin-right: 10px;
+    }
+
+    .top_dropdown {
+        display: none;
+        background: white;
+    }
+/*lai ikonas ar tekstu nolaizas kolona un ar checkbox uztaisijam, 
+kad uzspiez uz izvelni, vina paliek stavot nevis pazuud
+#dropdown_checkbox:checked- bija sāds kods, 
+bet tad piesledzot JS izmainijam uz .top_menu.active*/
+    .top_menu.active .top_dropdown { 
+        position: absolute;
+        top: 54px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 53px);
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+    }
+/*seit pielikam klat fonu fixed tam  MENU dropdownam 
+#dropdown_checkbox:checked- bija sāds kods, 
+bet tad piesledzot JS izmainijam uz .top_menu.active*/*/
+    .top_menu.active .top_dropdown__bg {
+        position: fixed;
+        top: 54px;
+        left: 0;
+        background: rgba(255, 255, 255, 0.801);
+        width: 100%;
+        height: calc(100vh - 54px);
+    }
+/*#dropdown_checkbox:checked- bija sāds kods, 
+bet tad piesledzot JS izmainijam uz .top_menu.active*/
+    .top_menu.active .top_dropdown .text {
+       display: inline-block;
+   }
+}
+
