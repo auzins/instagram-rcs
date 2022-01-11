@@ -1,5 +1,6 @@
 /** atslegt noklusejumu, linijai kas ir headerii**/
 /** selektorus augstak pozoicionejam kas aiznem un ieklauj vairak, piemeram body utt**/
+
 body {
     background: #FAFAFA;
     margin: 0;
@@ -27,6 +28,8 @@ header {
 
 .top_logo {
     display: flex;
+    margin-right: 8px;
+    
 }
 
 /**html faila iedevam Nav class - top menu lai css faila varetu selektet un stilizet**/
@@ -81,6 +84,8 @@ piemeram ikonas saja gadijuma**/
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
 }
 
 /** iedevam klasi html faila, talak css faila sis ir lai stilizetu search lauku**/
@@ -105,7 +110,8 @@ padding: 0 7px 0 20px;
     color: #8f8f8f;
     font-size: 9px;
     position: absolute;
-    left: 72px;  
+    margin-right: 45px;
+    
 }
 
 .search_bar > input:focus {
@@ -247,3 +253,9 @@ bet tad piesledzot JS izmainijam uz .top_menu.active*/
    }
 }
 
+@media only screen and (max-width: 400px) {
+    .search_bar > input {
+        width: 100%;
+    }
+
+}
