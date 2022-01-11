@@ -55,13 +55,13 @@ piemeram ikonas saja gadijuma**/
     font-size: 22px;
     align-items: center;
     margin-left: 8px;
-    padding: 7px;
+    padding: 7px; 
 }
 
 
 .top_menu .dropdown_link {
     display: none;
-    height: 22px;
+   
     width: 22px;
 }
 
@@ -162,7 +162,8 @@ main > div {
 }
 
 /** saadi var ar :hover uztaisit, ka tiek pielietots tiesi sis stils , piemeram border-top, taja gadijuma, kad uzbiida peli uz sii linka(pogas)un paradas arii sviitrina augsa**/
-.gallery_nav > a:hover {
+.gallery_nav > a:hover,
+.gallery_nav > .active {
     border-top: 1px solid #262626;
     color: #262626;
     margin-top: -1px;
@@ -195,9 +196,14 @@ main > div {
     .top_menu .dropdown_link {
         display: flex;
     }
-/* seit linkiem (like,home,utt uztaisiju lielaku atstarpi sava starpa un lielaku neredzamos pogu, vieglak bus uzspiest uz linka*/
+/* seit sadalis stilu divos linkos , seit linkiem (like,home,utt uztaisiju lielaku atstarpi sava starpa un lielaku neredzamos pogu, vieglak bus uzspiest uz linka*/
     .top_menu a {
         padding: 20px 7px ;
+       
+    }
+
+    .top_menu a {
+       
         border-bottom: 1px solid #dbdbdb;
     }
 /*Pedejam elementam nonem apakssvitru varetu likt ari ar last of type, 
